@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="bebas/stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="script.js"></script>
+    <title>47land</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 header-head">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img src="img/logo-head.png" alt="">
+                <ul class="header-nav">
+                    <li class="header-nav__li">Участки на карте</li>
+                    <li class="header-nav__li">Каталог</li>
+                    <!-- <li class="header-nav__li">Недра</li>
+                    <li class="header-nav__li">Партнеры</li>
+                    <li class="header-nav__li">О компании</li>
+                    <li class="header-nav__li">Статьи</li>
+                    <li class="header-nav__li">Контакты</li> -->
+                </ul>
+                <button class="header-btn">Заказать звонок</button>
+                <button class="header-btn header-btn__burger"><i class="fas fa-phone"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 header-body">
+                    <div class="header-body__title">земельные участки</div>
+                    <div class="header-body__subtitle">всеволжского района</div>
+                    <div class="header-body__toggle">
+                        <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                        <label for="toggle-on" class="btn">Аренда</label>
+                        <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                        <label for="toggle-off" class="btn">Продажа</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="container-fluid header-footer__bg">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 header-footer">
+                <div class="header-footer__input"><i class="fas fa-map-marker-alt"></i><input type="text" value="Адрес"></div>
+                <div class="header-footer__select">
+                    <i class="fas fa-home"></i>
+                    <select name="Способ реализации" id="">
+                        <option disabled>Способ реализации</option>
+                        <option value="">Ипотека</option>
+                        <option value="">Покупка</option>
+                    </select>
+                </div>
+                <div class="header-footer__select header-footer__selectShow">
+                    <i class="far fa-square"></i>
+                    <select name="Способ реализации" id="">
+                            <option disabled>меньше 1 ар.</option>
+                            <option value="">10 ар. - 1 Га.</option>
+                            <option value="">1 Га. - 5 Га.</option>
+                            <option value="">свыше 5 Га.</option>
+                        </select>
+                </div>
+                <div class="header-footer__buttonShow">
+                    <button class="header-footer__button">меньше 1 ар.</button>
+                    <button class="header-footer__button">10 ар. - 1 Га.</button>
+                    <button class="header-footer__button">1 Га. - 5 Га.</button>
+                    <button class="header-footer__button">свыше 5 Га.</button>
+                </div>
+                <button class="header-footer__button header-footer__search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid types-bg">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 row justify-content-between align-items-center types-box">
+                <div class="col-lg col-md-6 second-order">
+                    <div class="types-block types-block__mini">
+                        <img src="img/Prefab-timber-cottage-combines-the-traditional-and-the-modern.png" alt="">
+                        <div class="types-mini__hover"></div>
+                        <div class="types-mini__text types-mini__text">
+                            <h1 class="types-mini__h1">земли для</h1>
+                            <div class="types-mini__title">коттеджной застройки</div>
+                        </div>
+                    </div>
+                    <div class="types-block types-block__mini">
+                        <img src="img/all-bong-98724-unsplash.png" alt="">
+                        <div class="types-mini__hover"></div>
+                        <div class="types-mini__text types-mini__text">
+                            <h1 class="types-mini__h1">земли для</h1>
+                            <div class="types-mini__title">кмногоэтажной застройки</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 main-order">
+                    <div class="types-block types-block__main">
+                        <img src="img/mainimgg.png" alt="">
+                        <div class="types-main__hover"></div>
+                        <div class="types-main__text types-main__text">
+                            <h1 class="types-main__h1">участки под</h1>
+                            <div class="types-main__title">инвестиционные проекты</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 second-order">
+                    <div class="types-block types-block__mini">
+                        <img src="img/michael-moloney-62696-unsplash.png" alt="">
+                        <div class="types-mini__hover"></div>
+                        <div class="types-mini__text types-mini__text">
+                            <h1 class="types-mini__h1">земли для</h1>
+                            <div class="types-mini__title">коммерческой застройки</div>
+                        </div>
+                    </div>
+                    <div class="types-block types-block__mini">
+                        <img src="img/illia-cherednychenko-178496-unsplash.png" alt="">
+                        <div class="types-mini__hover"></div>
+                        <div class="types-mini__text types-mini__text">
+                            <h1 class="types-mini__h1">земли для</h1>
+                            <div class="types-mini__title">логистических комплексов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid catalog-bg">
+        <div class="container ">
+            <div class="crop-block">Каталог</div>
+            <div class="catalog-box">
+                <div class="catalog-blocks row justify-content-center flex-lg-nowrap">
+                    <div class="catalog-block col-lg-6 col-md-12">
+                        <div class="catalog-slider">
+                            <div class="catalog-slide"><img src="img/18.png" alt=""></div>
+                            <div class="catalog-slide"><img src="img/mainimgg.png" alt=""></div>
+                            <div class="catalog-slide"><img src="img/18.png" alt=""></div>
+                            <div class="catalog-slide"><img src="img/mainimgg.png" alt=""></div>
+                        </div>
+                        <div class="catalog-slider__nav">
+                            <div class="catalog-slide"><img src="img/18.png" alt=""></div>
+                            <div class="catalog-slide"><img src="img/mainimgg.png" alt=""></div>
+                            <div class="catalog-slide"><img src="img/18.png" alt=""></div>
+                            <div class="catalog-slide"><img src="img/mainimgg.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="catalog-block catalog-text col-lg-6 col-md-12">
+                        <h1 class="catalog-text__title">Волжский район, садовая 45</h1>
+                        <div class="catalog-text__cost">
+                            2.5 Га <span><span style="font-size: 13px">от</span> 12 млн $</span>
+                        </div>
+                        <div class="catalog-block__check">
+                            <button class="header-footer__button catalog-check__btn">Аренда</button>
+                            <button class="header-footer__button catalog-check__btn">1 Га - 5 Га</button>
+                        </div>
+                        <div class="catalog-text__article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, aliquam exercitationem? A aliquid vero totam autem eius doloremque rerum, molestiae reiciendis adipisci et, maxime voluptates.</div>
+                        <div class="catalog-text__buttons">
+                            <button class="header-btn">Подробнее</button>
+                            <button class="header-btn">Оформить заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sale-bg">
+        <div class="container">
+            <div class="crop-block crop-block__white">акции</div>
+            <div class="row sale-blocks justify-content-center justify-content-lg-between">
+                <div class="col-lg-6 col-12">
+                    <div class="sale-block">
+                        <h1 class="sale-title">участки в окружении соснового леса</h1>
+                        <div class="sale-subtitle">успейте приобрести</div>
+                        <div class="sale-article">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora dolores, facilis ratione, odio vero illo harum officia dolorem molestias ipsam culpa sit corrupti deserunt earum animi qui? Consequuntur, vitae molestias error voluptate
+                            in repellat fugiat optio, expedita enim neque earum.</div>
+                        <div class="sale-buttons">
+                            <button class="sale-btn">Оставить заявку</button>
+                            <button class="sale-btn">Узнать подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 sale-block__col">
+                    <div class="sale-block__right">
+                        <div class="sale-block__circle"><i class="fas fa-play"></i></div>
+                        <div class="sale-block__text">Осмотрите окрестности этого уникального места в широкоформатном виде</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid option-bg">
+        <div class="container">
+            <div class="crop-block crop-block__white">Поможем с подключением комунальных услуг</div>
+            <div class="option-blocks row justify-content-md-between justify-content-sm-center">
+                <div class="col-lg-4 col-12">
+                    <div class="option-block">
+                        <div class="option-circle"><img src="img/lep.png" alt=""></div>
+                        <h1 class="option-title">электричество</h1>
+                        <div class="option-subtitle">возьмем на себя:</div>
+                        <div class="option-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis a laudantium mollitia, aut ipsum sit eum beatae cupiditate? Facere illum cumque corrupti!</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="option-block">
+                        <div class="option-circle"><img src="img/gas.png" alt=""></div>
+                        <h1 class="option-title">газ</h1>
+                        <div class="option-subtitle">оформим:</div>
+                        <div class="option-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis a laudantium mollitia, aut ipsum sit eum beatae cupiditate? Facere illum cumque corrupti!</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="option-block">
+                        <div class="option-circle"><img src="img/water.png" alt=""></div>
+                        <h1 class="option-title">водоснабжение</h1>
+                        <div class="option-subtitle">поможем с вопросами:</div>
+                        <div class="option-article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis a laudantium mollitia, aut ipsum sit eum beatae cupiditate? Facere illum cumque corrupti!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid company-bg">
+        <div class="container">
+            <div class="company-blocks row justify-content-md-between justify-content-sm-center align-items-center">
+                <div class="company-block company-block__text col-lg-6 col-12">
+                    <h1 class="company-title">Компания</h1>
+                    <div class="company-article">
+                        <div class="company-text company-text__top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error quo debitis consequatur unde repudiandae cumque iusto, soluta est asperiores!</div>
+                        <div class="company-text company-text__bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, totam perferendis fugit nisi voluptatem veniam unde itaque autem sit natus?</div>
+                    </div>
+                </div>
+                <div class="company-block col-lg-6 col-12"><img src="img/lg.png" class="company-img"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
