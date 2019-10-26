@@ -18,78 +18,83 @@
 </head>
 
 <body>
-    <header class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 header-head">
-                <div class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <div class="header">
+        <header class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 header-head">
+                    <div class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <img src="img/logo-head.png" alt="">
+                    <ul class="header-nav">
+                        <li class="header-nav__li">Участки на карте</li>
+                        <li class="header-nav__li">Каталог</li>
+                        <li class="header-nav__li">Недра</li>
+                        <li class="header-nav__li">Партнеры</li>
+                        <li class="header-nav__li">О компании</li>
+                        <li class="header-nav__li">Статьи</li>
+                        <li class="header-nav__li">Контакты</li>
+                    </ul>
+                    <button class="header-btn">Заказать звонок</button>
+                    <button class="header-btn header-btn__burger"><i class="fas fa-phone"></i></button>
                 </div>
-                <img src="img/logo-head.png" alt="">
-                <ul class="header-nav">
-                    <li class="header-nav__li">Участки на карте</li>
-                    <li class="header-nav__li">Каталог</li>
-                    <!-- <li class="header-nav__li">Недра</li>
-                    <li class="header-nav__li">Партнеры</li>
-                    <li class="header-nav__li">О компании</li>
-                    <li class="header-nav__li">Статьи</li>
-                    <li class="header-nav__li">Контакты</li> -->
-                </ul>
-                <button class="header-btn">Заказать звонок</button>
-                <button class="header-btn header-btn__burger"><i class="fas fa-phone"></i></button>
             </div>
-        </div>
+        </header>
+    </div>
+    <div class="container-fluid header-bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12 header-body">
                     <div class="header-body__title">земельные участки</div>
                     <div class="header-body__subtitle">всеволжского района</div>
-                    <div class="header-body__toggle">
+                    <!-- <div class="header-body__toggle">
                         <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
                         <label for="toggle-on" class="btn">Аренда</label>
                         <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
                         <label for="toggle-off" class="btn">Продажа</label>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
-    </header>
-    <div class="container-fluid header-footer__bg">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 header-footer">
-                <div class="header-footer__input"><i class="fas fa-map-marker-alt"></i><input type="text" value="Адрес"></div>
-                <div class="header-footer__select">
-                    <i class="fas fa-home"></i>
-                    <select name="Способ реализации" id="">
+        <div class="container-fluid header-footer__bg">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 header-footer">
+                    <div class="header-footer__input"><i class="fas fa-map-marker-alt"></i><input type="text" value="Адрес"></div>
+                    <div class="header-footer__select">
+                        <i class="fas fa-home"></i>
+                        <select name="Способ реализации" id="">
                         <option disabled>Способ реализации</option>
                         <option value="">Ипотека</option>
                         <option value="">Покупка</option>
                     </select>
-                </div>
-                <div class="header-footer__select header-footer__selectShow">
-                    <i class="far fa-square"></i>
-                    <select name="Способ реализации" id="">
+                    </div>
+                    <div class="header-footer__select header-footer__selectShow">
+                        <i class="far fa-square"></i>
+                        <select name="Способ реализации" id="">
                             <option disabled>меньше 1 ар.</option>
                             <option value="">10 ар. - 1 Га.</option>
                             <option value="">1 Га. - 5 Га.</option>
                             <option value="">свыше 5 Га.</option>
                         </select>
+                    </div>
+                    <div class="header-footer__buttonShow">
+                        <button class="header-footer__button">меньше 1 ар.</button>
+                        <button class="header-footer__button">10 ар. - 1 Га.</button>
+                        <button class="header-footer__button">1 Га. - 5 Га.</button>
+                        <button class="header-footer__button">свыше 5 Га.</button>
+                    </div>
+                    <button class="header-footer__button header-footer__search"><i class="fas fa-search"></i></button>
                 </div>
-                <div class="header-footer__buttonShow">
-                    <button class="header-footer__button">меньше 1 ар.</button>
-                    <button class="header-footer__button">10 ар. - 1 Га.</button>
-                    <button class="header-footer__button">1 Га. - 5 Га.</button>
-                    <button class="header-footer__button">свыше 5 Га.</button>
-                </div>
-                <button class="header-footer__button header-footer__search"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </div>
+
     <div class="container-fluid types-bg">
-        <div class="row justify-content-center">
+        <div class="types-bg__opacity row justify-content-center">
             <div class="col-xl-10 row justify-content-between align-items-center types-box">
                 <div class="col-lg col-md-6 second-order">
                     <div class="types-block types-block__mini">
@@ -248,6 +253,95 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="crop-block">поможем выбрать лучшее предложение и подобрать участок специально для вас</div>
+        <div class="request-block">
+            <h1 class="request-title">Оставьте заявку</h1>
+            <div class="request-input row justify-content-center align-items-center">
+                <input type="text" value="Ваш телефон" class="col-6"><input type="text" value="Ваш e-mail" class="col-6">
+                <input type="text" value="Как к Вам обращаться?" class="col-12">
+                <input type="text" value="Можете оставить аш комментарий ли сообщение" class="col-12">
+            </div>
+            <button class="header-btn request-btn">Отправить</button>
+        </div>
+    </div>
+    <!-- <div class="container-fluid system-bg">
+        <div class="container">
+            <div class="crop-block">Воспользуйтесь нашей системой подбора</div>
+            <div class="system-block row justify-content-end">
+                <img src="img/mapping.png" alt="">
+                <div class="col-12 system-text">
+                    <div class="system-title">Отображение всех удоступных участков на интерактивной карте!</div>
+                    <div class="system-title">Переключение между арендуемыми и продаваемыми участками</div>
+                    <div class="system-title">Удобный поиск по параметрам!</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container-fluid system-bg">
+        <div class="crop-block">Воспользуйтесь нашей системой подбора</div>
+        <div class="system-block row justify-content-end">
+            <div class="system-img col-6">
+                <!-- <img src="img/mapping.png"> -->
+            </div>
+            <div class="col-sm-6 col-12 system-text">
+                <div class="system-title">Отображение всех удоступных участков на интерактивной карте!</div>
+                <div class="system-title">Переключение между арендуемыми и продаваемыми участками</div>
+                <div class="system-title">Удобный поиск по параметрам!</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid video-bg">
+        <div class="video-bg__opacity">
+            <div class="container">
+                <div class="video-block">
+                    <div class="crop-block crop-block__white">Видеообращение</div>
+                    <h1 class="video-title">Посмотрите наше видео</h1>
+                    <div class="video-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, enim assumenda iusto aut vel veritatis! Commodi quaerat, aut atque corporis ratione voluptates voluptatibus! Nostrum eligendi, necessitatibus, repellendus laudantium
+                        architecto delectus perferendis fugit vero quos hic ut dicta tempore harum inventore.</div>
+                    <div class="sale-block__circle video-circle"><i class="fas fa-play"></i></div>
+                    <div class="video-duration">90 секунд</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid footer row">
+        <div class="footer-logo col-12 col-md-12 col-xl-auto order-xl-1 order-3">
+            <img src="img/logo-footer.png" alt="">
+        </div>
+        <div class="footer-nav col-12 col-md-6 col-xl order-xl-2 order-1">
+            <ul class="footer-nav__ul">
+                <li class="footer-nav__li">External link</li>
+                <li class="footer-nav__li">Contact Us</li>
+                <li class="footer-nav__li">Feedback</li>
+                <li class="footer-nav__li">AboutUs</li>
+            </ul>
+            <ul class="footer-nav__ul">
+                <li class="footer-nav__li">External link</li>
+                <li class="footer-nav__li">Contact Us</li>
+                <li class="footer-nav__li">Feedback</li>
+                <li class="footer-nav__li">AboutUs</li>
+            </ul>
+            <ul class="footer-nav__ul">
+                <li class="footer-nav__li">External link</li>
+                <li class="footer-nav__li">Contact Us</li>
+                <li class="footer-nav__li">Feedback</li>
+                <li class="footer-nav__li">AboutUs</li>
+            </ul>
+        </div>
+        <div class="footer-links col-12 col-md-6 col-xl-auto order-xl-3 order-2">
+            <ul class="footer-links__icon">
+                <li><i class="fab fa-vk"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-whatsapp"></i></li>
+                <li><i class="fab fa-google"></i></li>
+            </ul>
+            <div class="footer-links__created">
+                <img src="img/media.png" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
