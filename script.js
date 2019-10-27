@@ -16,4 +16,25 @@ $(document).ready(function() {
         centerMode: true,
         focusOnSelect: true
     });
+
+    $('.slicker').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+    });
+
+    $('.burger-icon').on('click', function() {
+        $(this).toggleClass('burger-icon__close');
+        $('.toggle-block').toggleClass('toggle-block__close')
+    });
+
+    $('.video-circle').on('click', function() {
+        $('.popup-bg').addClass('popup-active');
+    })
+
+    $('.popup-video').on('click', function() {
+        $('.popup-bg').removeClass('popup-active');
+    })
 });
