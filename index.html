@@ -18,32 +18,30 @@
 </head>
 
 <body>
-    <div class="header">
-        <header class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 header-head">
-                    <div class="burger-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <img src="img/logo-head.png" alt="">
-                    <ul class="header-nav">
-                        <li class="header-nav__li">Участки на карте</li>
-                        <li class="header-nav__li">Каталог</li>
-                        <li class="header-nav__li">Недра</li>
-                        <li class="header-nav__li">Партнеры</li>
-                        <li class="header-nav__li">О компании</li>
-                        <li class="header-nav__li">Статьи</li>
-                        <li class="header-nav__li">Контакты</li>
-                    </ul>
-                    <button class="header-btn">Заказать звонок</button>
-                    <button class="header-btn header-btn__burger"><i class="fas fa-phone"></i></button>
+    <header class="header">
+        <div class="large-container">
+            <div class="header-head">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
+                <img src="img/logo-head.png" alt="">
+                <ul class="header-nav">
+                    <li class="header-nav__li">Участки на карте</li>
+                    <li class="header-nav__li">Каталог</li>
+                    <li class="header-nav__li">Недра</li>
+                    <li class="header-nav__li">Партнеры</li>
+                    <li class="header-nav__li">О компании</li>
+                    <li class="header-nav__li">Статьи</li>
+                    <li class="header-nav__li">Контакты</li>
+                </ul>
+                <button class="header-btn">Заказать звонок</button>
+                <button class="header-btn header-btn__burger"><i class="fas fa-phone"></i></button>
             </div>
-        </header>
-    </div>
+        </div>
+    </header>
     <div class="container-fluid header-bg">
         <div class="toggle-block">
             <ul class="toggle-nav">
@@ -65,85 +63,103 @@
             </div>
         </div>
 
-        <div class="container-fluid header-footer__bg">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 header-footer">
-                    <div class="header-footer__input"><i class="fas fa-map-marker-alt"></i><input type="text" value="Адрес"></div>
-                    <div class="header-footer__select">
-                        <i class="fas fa-home"></i>
-                        <select name="Способ реализации" id="">
-                        <option disabled>Способ реализации</option>
-                        <option value="">Ипотека</option>
-                        <option value="">Покупка</option>
-                    </select>
+        <div class="header-footer__bg">
+            <div class="large-container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-3 col-6">
+                        <label class="header-footer__input icon-input">
+                            <i class="icon-input__icon fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="Адрес" class="icon-input__input">
+                        </label>
                     </div>
-                    <div class="header-footer__select header-footer__selectShow">
-                        <i class="far fa-square"></i>
-                        <select name="Способ реализации" id="">
-                            <option disabled>меньше 1 ар.</option>
-                            <option value="">10 ар. - 1 Га.</option>
-                            <option value="">1 Га. - 5 Га.</option>
-                            <option value="">свыше 5 Га.</option>
-                        </select>
+                    <div class="col-lg-3 col-6">
+                        <label for="" class="header-footer__input header-footer__select">
+                                <i class="icon-input__icon fas fa-home"></i>
+                                <select name="Способ реализации" id="" class="icon-input__input">
+                                        <option disabled selected>Способ реализации</option>
+                                        <option value="Ипотека">Ипотека</option>
+                                        <option value="Покупка">Покупка</option>
+                                </select>
+                            </label>
                     </div>
-                    <div class="header-footer__buttonShow">
-                        <button class="header-footer__button">меньше 1 ар.</button>
-                        <button class="header-footer__button">10 ар. - 1 Га.</button>
-                        <button class="header-footer__button">1 Га. - 5 Га.</button>
-                        <button class="header-footer__button">свыше 5 Га.</button>
+                    <div class="col-lg-auto col-3">
+                        <label class="toggle-button">
+                            <input name="size" type="radio" value="меньше 1 ар." id="" class="toggle-button__input">
+                            <div class="toggle-button__button">меньше 1 ар.</div>
+                        </label>
                     </div>
-                    <button class="header-footer__button header-footer__search"><i class="fas fa-search"></i></button>
+                    <div class="col-lg-auto col-3">
+                        <label class="toggle-button">
+                            <input name="size" type="radio" value="10 ар. - 1 Га." id="" class="toggle-button__input">
+                            <div class="toggle-button__button">10 ар. - 1 Га.</div>
+                        </label>
+                    </div>
+                    <div class="col-lg-auto col-3">
+                        <label class="toggle-button">
+                            <input name="size" type="radio" value="1 Га. - 5 Га." id="" class="toggle-button__input">
+                            <div class="toggle-button__button">1 Га. - 5 Га.</div>
+                        </label>
+                    </div>
+                    <div class="col-lg-auto col-3">
+                        <button class="header-footer__button header-footer__search"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid types-bg">
-        <div class="types-bg__opacity row justify-content-center">
-            <div class="col-xl-10 row justify-content-between align-items-center types-box">
-                <div class="col-lg col-md-6 second-order">
-                    <div class="types-block types-block__mini">
-                        <img src="img/Prefab-timber-cottage-combines-the-traditional-and-the-modern.png" alt="">
-                        <div class="types-mini__hover"></div>
-                        <div class="types-mini__text types-mini__text">
-                            <h1 class="types-mini__h1">земли для</h1>
-                            <div class="types-mini__title">коттеджной застройки</div>
+    <div class="types-bg">
+        <div class="types-bg__opacity">
+            <div class="large-container">
+                <div class="row justify-content-between align-items-stretch types-box">
+                    <div class="col-lg col-md-6 second-order">
+                        <div class="row justify-content-lg-between">
+                            <div class="types-block types-block__mini">
+                                <img src="img/Prefab-timber-cottage-combines-the-traditional-and-the-modern.png" alt="">
+                                <div class="types-mini__hover"></div>
+                                <div class="types-mini__text types-mini__text">
+                                    <h1 class="types-mini__h1">земли для</h1>
+                                    <div class="types-mini__title">коттеджной застройки</div>
+                                </div>
+                            </div>
+                            <div class="types-block types-block__mini">
+                                <img src="img/all-bong-98724-unsplash.png" alt="">
+                                <div class="types-mini__hover"></div>
+                                <div class="types-mini__text types-mini__text">
+                                    <h1 class="types-mini__h1">земли для</h1>
+                                    <div class="types-mini__title">кмногоэтажной застройки</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="types-block types-block__mini">
-                        <img src="img/all-bong-98724-unsplash.png" alt="">
-                        <div class="types-mini__hover"></div>
-                        <div class="types-mini__text types-mini__text">
-                            <h1 class="types-mini__h1">земли для</h1>
-                            <div class="types-mini__title">кмногоэтажной застройки</div>
+                    <div class="col-lg-5 col-md-12 main-order">
+                        <div class="types-block types-block__main">
+                            <img src="img/mainimgg.png" alt="">
+                            <div class="types-main__hover"></div>
+                            <div class="types-main__text types-main__text">
+                                <h1 class="types-main__h1">участки под</h1>
+                                <div class="types-main__title">инвестиционные проекты</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 col-md-12 main-order">
-                    <div class="types-block types-block__main">
-                        <img src="img/mainimgg.png" alt="">
-                        <div class="types-main__hover"></div>
-                        <div class="types-main__text types-main__text">
-                            <h1 class="types-main__h1">участки под</h1>
-                            <div class="types-main__title">инвестиционные проекты</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg col-md-6 second-order">
-                    <div class="types-block types-block__mini">
-                        <img src="img/michael-moloney-62696-unsplash.png" alt="">
-                        <div class="types-mini__hover"></div>
-                        <div class="types-mini__text types-mini__text">
-                            <h1 class="types-mini__h1">земли для</h1>
-                            <div class="types-mini__title">коммерческой застройки</div>
-                        </div>
-                    </div>
-                    <div class="types-block types-block__mini">
-                        <img src="img/illia-cherednychenko-178496-unsplash.png" alt="">
-                        <div class="types-mini__hover"></div>
-                        <div class="types-mini__text types-mini__text">
-                            <h1 class="types-mini__h1">земли для</h1>
-                            <div class="types-mini__title">логистических комплексов</div>
+                    <div class="col-lg col-md-6 second-order">
+                        <div class="row justify-content-lg-between">
+                            <div class="types-block types-block__mini">
+                                <img src="img/michael-moloney-62696-unsplash.png" alt="">
+                                <div class="types-mini__hover"></div>
+                                <div class="types-mini__text types-mini__text">
+                                    <h1 class="types-mini__h1">земли для</h1>
+                                    <div class="types-mini__title">коммерческой застройки</div>
+                                </div>
+                            </div>
+                            <div class="types-block types-block__mini">
+                                <img src="img/illia-cherednychenko-178496-unsplash.png" alt="">
+                                <div class="types-mini__hover"></div>
+                                <div class="types-mini__text types-mini__text">
+                                    <h1 class="types-mini__h1">земли для</h1>
+                                    <div class="types-mini__title">логистических комплексов</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -175,13 +191,13 @@
                             2.5 Га <span><span style="font-size: 13px">от</span> 12 млн $</span>
                         </div>
                         <div class="catalog-block__check">
-                            <button class="header-footer__button catalog-check__btn">Аренда</button>
-                            <button class="header-footer__button catalog-check__btn">1 Га - 5 Га</button>
+                            <button class="toggle-button__button catalog-check__btn">Аренда</button>
+                            <button class="toggle-button__button catalog-check__btn">1 Га - 5 Га</button>
                         </div>
                         <div class="catalog-text__article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, aliquam exercitationem? A aliquid vero totam autem eius doloremque rerum, molestiae reiciendis adipisci et, maxime voluptates.</div>
                         <div class="catalog-text__buttons">
-                            <button class="header-btn">Подробнее</button>
-                            <button class="header-btn">Оформить заказ</button>
+                            <button class="catalog-btn">Подробнее</button>
+                            <button class="catalog-btn">Оформить заказ</button>
                         </div>
                     </div>
                 </div>
@@ -191,8 +207,8 @@
     <div class="container-fluid sale-bg">
         <div class="container">
             <div class="crop-block crop-block__white">акции</div>
-            <div class="row sale-blocks justify-content-center justify-content-lg-between">
-                <div class="col-lg-6 col-12">
+            <div class="row sale-blocks justify-content-center justify-content-lg-between align-items-center">
+                <div class="col-lg col-12">
                     <div class="sale-block">
                         <h1 class="sale-title">участки в окружении соснового леса</h1>
                         <div class="sale-subtitle">успейте приобрести</div>
@@ -204,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 sale-block__col">
+                <div class="col-lg col-12 sale-block__col">
                     <div class="slicker">
                         <div class="sale-block__right">
                             <div class="sale-block__circle"><i class="fas fa-play"></i></div>
@@ -220,6 +236,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-auto" id="sale-blocks-dots"></div>
             </div>
         </div>
     </div>
@@ -272,10 +289,21 @@
         <div class="crop-block">поможем выбрать лучшее предложение и подобрать участок специально для вас</div>
         <div class="request-block">
             <h1 class="request-title">Оставьте заявку</h1>
-            <div class="request-input row justify-content-center align-items-center">
-                <input type="text" value="Ваш телефон" class="col-6"><input type="text" value="Ваш e-mail" class="col-6">
-                <input type="text" value="Как к Вам обращаться?" class="col-12">
-                <input type="text" value="Можете оставить аш комментарий ли сообщение" class="col-12">
+            <div class="request-form">
+                <div class="request-form__inner row justify-content-center align-items-center">
+                    <div class="request-input col-lg-6 col-12">
+                        <input type="text" placeholder="Ваш телефон">
+                    </div>
+                    <div class="request-input col-lg-6 col-12">
+                        <input type="text" placeholder="Ваш e-mail">
+                    </div>
+                    <div class="request-input col-12">
+                        <input type="text" placeholder="Как к Вам обращаться?" class="col-12">
+                    </div>
+                    <div class="request-input col-12">
+                        <textarea placeholder="Можете оставить ваш комментарий или сообщение"></textarea>
+                    </div>
+                </div>
             </div>
             <button class="header-btn request-btn">Отправить</button>
         </div>

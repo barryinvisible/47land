@@ -5,7 +5,7 @@ $(document).ready(function() {
         arrows: false,
         fade: true,
         touchMove: true,
-        asNavFor: 'catalog-slider__nav'
+        asNavFor: '.catalog-slider__nav'
     });
     $('.catalog-slider__nav').slick({
         slidesToShow: 3,
@@ -22,7 +22,9 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        dots: true
+        dots: true,
+        appendDots: $("#sale-blocks-dots"),
+        dotsClass: 'btn-slick'
     });
 
     $('.burger-icon').on('click', function() {
@@ -37,4 +39,6 @@ $(document).ready(function() {
     $('.popup-video').on('click', function() {
         $('.popup-bg').removeClass('popup-active');
     })
+
+    $('button[role="tab"]').empty();
 });

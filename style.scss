@@ -90,11 +90,11 @@
 .toggle {
     &-block {
         display: none;
-        // opacity: 0;
-        // transition: .4s opacity ease-in-out;
+        opacity: 0;
+        transition: .4s opacity ease-in-out;
         &__close {
             display: block;
-            // opacity: 1;
+            opacity: 1;
             z-index: 10001;
         }
     }
@@ -220,19 +220,19 @@ input[type="radio"].toggle {
     }
 }
 
-.header-footer {
-    padding-top: 50px;
-    padding-bottom: 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__bg {
-        background-color: #7bb52e;
-        position: absolute;
-        bottom: 0;
-        margin-right: -15px !important;
-        margin-left: -15px !important;
-    }
+.large-container {
+    max-width: 1590px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.toggle-button__input:checked~.toggle-button__button {
+    background-color: #96c750;
+    border-color: #c4e09c;
+}
+
+.toggle-button {
     &__button {
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
@@ -245,9 +245,29 @@ input[type="radio"].toggle {
         cursor: pointer;
         margin: 0 15px;
         &:hover {
-            background-color: #96c750;
-            border-color: #c4e09c;
+            // background-color: #96c750;
+            // border-color: #c4e09c;
         }
+    }
+}
+
+.toggle-button__input {
+    display: none;
+}
+
+.header-footer {
+    padding-top: 50px;
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__bg {
+        background-color: #7bb52e;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 50px 0;
     }
     &__buttonShow {
         display: flex;
@@ -262,37 +282,52 @@ input[type="radio"].toggle {
         color: #1a1a1a;
     }
     &__input {
-        border-bottom: 1px #8abc49 solid;
+        position: relative;
+        display: block;
+        color: #fff;
         & i {
             padding-right: 15px;
-            color: #90c150;
-        }
-        & input {
-            border: none;
-            background-color: #7bb52e;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            color: #fff;
-            padding-bottom: 20px;
-        }
-    }
-    &__select {
-        border-bottom: 1px #8abc49 solid;
-        padding-bottom: 20px;
-        & i {
-            padding-right: 15px;
-            color: #90c150;
-        }
-        & select {
-            background: url(img/select.png) no-repeat right #7bb52e;
-            border: none;
-            color: #fff;
+            // color: #90c150;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
         }
     }
     &__selectShow {
         display: none;
     }
+}
+
+.icon-input__input {
+    position: relative;
+    display: block;
+    -webkit-appearance: none;
+    border: none;
+    background-color: #7bb52e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    padding: 15px 30px;
+    width: 100%;
+    height: auto;
+    background: none;
+    outline: none;
+    border-bottom: 1px #8abc49 solid;
+    &::placeholder {
+        color: #fff;
+    }
+}
+
+.header-footer__select::before {
+    content: "\f078";
+    right: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
 }
 
 .types {
@@ -324,6 +359,7 @@ input[type="radio"].toggle {
             width: 100%;
             height: auto;
             border-radius: 10px;
+            max-height: 209px;
         }
         &:hover .types-mini__hover {
             opacity: .6;
@@ -424,7 +460,7 @@ input[type="radio"].toggle {
             padding-bottom: 20px;
         }
     }
-    .header-footer__button {
+    .toggle-button__button {
         padding: 10px 20px;
     }
 }
@@ -488,6 +524,7 @@ input[type="radio"].toggle {
     }
     .main-order {
         order: 1;
+        padding-bottom: 20px;
     }
     .second-order {
         order: 4;
@@ -604,6 +641,23 @@ input[type="radio"].toggle {
     min-height: 430px;
 }
 
+.catalog-btn {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border: 3px solid;
+    border-color: #c2c2c2;
+    border-radius: 40px;
+    padding: 15px 30px;
+    transition: .4s box-shadow;
+    color: #c2c2c2;
+    &:hover {
+        box-shadow: 0px 0px 22px 3px rgba(167, 219, 87, 0.85);
+        color: #2b2b2b;
+        border-color: #a7db57;
+    }
+}
+
 .catalog-text {
     border: 15px #a7db57 solid;
     padding: 40px 30px;
@@ -672,7 +726,8 @@ input[type="radio"].toggle {
         padding: 65px 43px 42px;
         border-radius: 10px;
         &:hover {
-            border-bottom: 4px #96c750 solid;
+            // border-bottom: 4px #96c750 solid;
+            box-shadow: inset 0px -7px 0px 0px rgba(150, 199, 80, 1);
         }
     }
     &-circle {
@@ -842,31 +897,35 @@ input[type="radio"].toggle {
         margin-bottom: 90px;
         position: relative;
     }
+    &-form {
+        padding: 40px 30px;
+        &__inner {
+            max-width: 730px;
+            margin: 0 auto;
+        }
+    }
     &-title {
         font-family: 'Bebas Neue';
         font-weight: bold;
         font-size: 60px;
         padding: 0 50px;
         background-color: #fff;
-        position: absolute;
-        bottom: 425px;
+        transform: translateY(-50%);
     }
     &-input {
-        min-height: 275px;
-        padding-top: 80px;
-        & input {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        & input,
+        textarea {
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 400;
+            width: 100%;
             color: #c2c2c2;
             padding-left: 30px;
             padding-bottom: 15px;
-            margin-bottom: 40px;
             border: none;
             border-bottom: 1px #c2c2c2 solid;
-            &:nth-last-child(1) {
-                padding-bottom: 70px;
-            }
         }
     }
     &-btn {
@@ -1050,4 +1109,14 @@ input[type="radio"].toggle {
 
 .slicker {
     max-width: 300px;
+}
+
+.btn-slick button {
+    border-radius: 50%;
+    margin: 15px 0;
+    border: none;
+    background-color: #96c750;
+    height: 20px;
+    width: 20px;
+    outline: none;
 }

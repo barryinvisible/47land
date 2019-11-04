@@ -69,9 +69,12 @@
   transform: translateY(-10px); }
 
 .toggle-block {
-  display: none; }
+  display: none;
+  opacity: 0;
+  transition: .4s opacity ease-in-out; }
   .toggle-block__close {
     display: block;
+    opacity: 1;
     z-index: 10001; }
 .toggle-nav {
   margin-left: -15px;
@@ -174,6 +177,31 @@ input[type="radio"].toggle {
     input[type="radio"].toggle:checked + label:after {
       left: 0; }
 
+.large-container {
+  max-width: 1590px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.toggle-button__input:checked ~ .toggle-button__button {
+  background-color: #96c750;
+  border-color: #c4e09c; }
+
+.toggle-button__button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px 40px;
+  border: 1px #95c451 solid;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 15px; }
+
+.toggle-button__input {
+  display: none; }
+
 .header-footer {
   padding-top: 50px;
   padding-bottom: 45px;
@@ -183,23 +211,10 @@ input[type="radio"].toggle {
   .header-footer__bg {
     background-color: #7bb52e;
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
-    margin-right: -15px !important;
-    margin-left: -15px !important; }
-  .header-footer__button {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 20px 40px;
-    border: 1px #95c451 solid;
-    border-radius: 10px;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    margin: 0 15px; }
-    .header-footer__button:hover {
-      background-color: #96c750;
-      border-color: #c4e09c; }
+    padding: 50px 0; }
   .header-footer__buttonShow {
     display: flex; }
   .header-footer__search {
@@ -211,30 +226,45 @@ input[type="radio"].toggle {
     border: none;
     color: #1a1a1a; }
   .header-footer__input {
-    border-bottom: 1px #8abc49 solid; }
+    position: relative;
+    display: block;
+    color: #fff; }
     .header-footer__input i {
       padding-right: 15px;
-      color: #90c150; }
-    .header-footer__input input {
-      border: none;
-      background-color: #7bb52e;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      color: #fff;
-      padding-bottom: 20px; }
-  .header-footer__select {
-    border-bottom: 1px #8abc49 solid;
-    padding-bottom: 20px; }
-    .header-footer__select i {
-      padding-right: 15px;
-      color: #90c150; }
-    .header-footer__select select {
-      background: url(img/select.png) no-repeat right #7bb52e;
-      border: none;
-      color: #fff; }
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
   .header-footer__selectShow {
     display: none; }
+
+.icon-input__input {
+  position: relative;
+  display: block;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #7bb52e;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  padding: 15px 30px;
+  width: 100%;
+  height: auto;
+  background: none;
+  outline: none;
+  border-bottom: 1px #8abc49 solid; }
+  .icon-input__input::placeholder {
+    color: #fff; }
+
+.header-footer__select::before {
+  content: "\f078";
+  right: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute; }
 
 .types-bg {
   background: url(img/bg.png);
@@ -258,7 +288,8 @@ input[type="radio"].toggle {
     .types-block__mini img {
       width: 100%;
       height: auto;
-      border-radius: 10px; }
+      border-radius: 10px;
+      max-height: 209px; }
     .types-block__mini:hover .types-mini__hover {
       opacity: .6; }
   .types-block__main {
@@ -335,7 +366,7 @@ input[type="radio"].toggle {
     padding-left: 10px;
     padding-bottom: 20px; }
 
-  .header-footer__button {
+  .toggle-button__button {
     padding: 10px 20px; } }
 @media screen and (max-width: 1200px) {
   .option-subtitle {
@@ -388,7 +419,8 @@ input[type="radio"].toggle {
     font-size: 43px; }
 
   .main-order {
-    order: 1; }
+    order: 1;
+    padding-bottom: 20px; }
 
   .second-order {
     order: 4; }
@@ -480,6 +512,21 @@ input[type="radio"].toggle {
   justify-content: space-between;
   min-height: 430px; }
 
+.catalog-btn {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border: 3px solid;
+  border-color: #c2c2c2;
+  border-radius: 40px;
+  padding: 15px 30px;
+  transition: .4s box-shadow;
+  color: #c2c2c2; }
+  .catalog-btn:hover {
+    box-shadow: 0px 0px 22px 3px rgba(167, 219, 87, 0.85);
+    color: #2b2b2b;
+    border-color: #a7db57; }
+
 .catalog-text {
   border: 15px #a7db57 solid;
   padding: 40px 30px; }
@@ -532,7 +579,7 @@ input[type="radio"].toggle {
   padding: 65px 43px 42px;
   border-radius: 10px; }
   .option-block:hover {
-    border-bottom: 4px #96c750 solid; }
+    box-shadow: inset 0px -7px 0px 0px #96c750; }
 .option-circle {
   border-radius: 50%;
   background-color: #fff;
@@ -666,29 +713,32 @@ input[type="radio"].toggle {
   border-radius: 10px;
   margin-bottom: 90px;
   position: relative; }
+.request-form {
+  padding: 40px 30px; }
+  .request-form__inner {
+    max-width: 730px;
+    margin: 0 auto; }
 .request-title {
   font-family: 'Bebas Neue';
   font-weight: bold;
   font-size: 60px;
   padding: 0 50px;
   background-color: #fff;
-  position: absolute;
-  bottom: 425px; }
+  transform: translateY(-50%); }
 .request-input {
-  min-height: 275px;
-  padding-top: 80px; }
-  .request-input input {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  .request-input input,
+  .request-input textarea {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    width: 100%;
     color: #c2c2c2;
     padding-left: 30px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
     border: none;
     border-bottom: 1px #c2c2c2 solid; }
-    .request-input input:nth-last-child(1) {
-      padding-bottom: 70px; }
 .request-btn {
   margin-bottom: 40px; }
 
@@ -813,5 +863,14 @@ input[type="radio"].toggle {
 
 .slicker {
   max-width: 300px; }
+
+.btn-slick button {
+  border-radius: 50%;
+  margin: 15px 0;
+  border: none;
+  background-color: #96c750;
+  height: 20px;
+  width: 20px;
+  outline: none; }
 
 /*# sourceMappingURL=style.css.map */
